@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+  .my_class1 {
+    background: grey;
+    width: 500px;
+
+  }
+  
+.ball_cont {
+  float: left;
+  height: 100px; 
+  width: 100px;
+}
+  .my_red_ball {
+   background: red;
+   border-radius: 50px;
+   height: 100px; 
+  width: 100px;
+   
+ } 
+
+ .my_white_ball {
+  display: none;
+   background: red;
+   border-radius: 50px;
+   height: 100px; 
+  width: 100px;
+ } 
+/*table{
+  border: 1px solid black;
+  table-layout: fixed;
+  width: 200px;
+  height: : 200px;
+}*/
+
+th, td {
+  border: 1px solid black;
+  width: 100px;
+  height: : 200px;
+}
+
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    var circle = $('#circle')
+    var circle2 = $('#circle2')
+    circle.mouseenter(function() { 
+      // circle.css("background", "white");
+      // circle2.css("background", "red");
+      circle.fadeOut(1000);
+      setTimeout(function () {
+        circle2.fadeIn(1000);
+      }, 1000);
+    });
+    circle2.mouseenter(function() { 
+      // circle.css("background", "red");
+      // circle2.css("background", "white");
+      circle2.fadeOut(1000);
+      setTimeout(function () {
+        circle.fadeIn(1000);
+      }, 1000);
+    });
+
+  });
+     // эта закрывающая скобка тоже
+   </script>
+   <title>неуловимое яйцо</title>
+ </head>
+ <body>
+  <h1>неуловимое яйцо</h1>
+ 
+  
+    
+    <div class="ball_cont"  ><div id="circle" class="my_red_ball" > </div></div>
+    
+  
+    <div class="ball_cont"  ><div id="circle2" class="my_white_ball"> </div></div>
+
+   
+ 
+
+
+</body>
+</html>
